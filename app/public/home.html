@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron" style="background: #008B8B; color: white;">
+        <h1 class="text-center"><strong>Friend Finder</strong></h1>
+    </div>
+    <div class="jumbotron" style="background: rgba(44, 48, 68, 0.94); color: white;">
+        <h2 class="text-center">Answer a few basic questions.</h2>
+        <h2 class="text-center">Then find the friend with the greatest compatibility!</h2>
+    </div>
+    	
+  	<div id="surveyButton" style="display: flex; justify-content: center"><a href="/survey">
+		<button style="width: 300px; height: 80px; margin-bottom: 20px; background-color: #212074; font-size: 30px;" type="button" class="btn btn-primary btn-lg">Go to Survey</button>
+	</div>
+
+</div>
+  
+
+<footer class="footer">
+	    <div class="container">
+		    <h4><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></h4>
+	    </div>
+</footer>
+
+
+<script src="text/javascript">
+
+// function runFriendsListQuery() {
+//             var currentURL = window.location.origin;
+
+//             $.ajax({url: currentURL + "/api/waitlist", method: "GET"})
+//                 .done(function(waitlistData) {
+
+//                     console.log("------------------");
+//                     console.log("URL: " + currentURL + "/api/waitlist");
+//                     console.log("------------------");
+//                     console.log(waitlistData);
+//                     console.log("------------------");
+
+//                     for (var i=0; i<waitlistData.length; i++) {
+//                         console.log(waitlistData[i]);
+
+//                         var waitListSection = $("<div>");
+//                         waitListSection.addClass("well");
+//                         waitListSection.attr("id", "waitListWell-" + i+1);
+//                         $("#waitListSection").append(waitListSection);
+
+//                         var tableNumber = i+1;
+
+//                         $("#waitListWell-" + i+1).append('<h2><span class="lable label-primary">' + tableNumber + "</span> | " + waitlistData[i].customerID + "</h2>");
+//                     }
+
+//                 });
+//         };
+
+
+// runFriendsListQuery();
+
+</script>
+
+</body>
+
+</html>
