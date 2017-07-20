@@ -195,9 +195,25 @@
   	</div>
   	</form>
 
-  	<div id="submitButton" style="display: flex; justify-content: center">
-		<button style="width: 250px; height: 80px; margin-bottom: 20px; background-color: #212074; font-size: 40px;" type="button" class="btn btn-primary btn-lg">Submit</button>
+  	<div style="display: flex; justify-content: center">
+		<a href="#"><button style="width: 250px; height: 80px; margin-bottom: 20px; background-color: #212074; font-size: 40px;" type="button" class="btn btn-primary btn-lg" id="submitButton">Submit</button>
+		</a>
 	</div>
+
+	<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <div class="caption">Your new friend is ... </div>
+                       	<img src="" class="imagepreview" >
+                    <div class="caption" id="caption"></div>
+                </div>
+
+            </div>
+        </div>
+   </div>
+   <hr>
 
 </div>
 
@@ -208,7 +224,45 @@
 </footer>
 
 
-<script src="text/javascript"></script>
+<script type="text/javascript">
+
+$("#submitButton").on("click", function(event) {
+	event.preventDefault();
+    
+       // The submit button is clicked on by the user.
+       // The post method sends an object (answers) to the server and the server returns an object (data) which is displayed in a modal.
+    var answers = {
+        name: $('#name').val().trim(),
+        photo: $('#photo').val().trim(),
+        scores: [$('#q1').val(),$('#q2').val(),$('#q3').val(),$('#q4').val(),$('#q5').val(),$('#q6').val(),$('#q7').val(),$('#q8').val(),$('#q9').val(),$('#q10').val()]          
+    };
+    console.log(answers);
+
+    $.post("/api/new", answers, function(data) {
+        if(data){
+            console.log(data);
+            $('#caption').text(data.name);
+            $('.imagepreview').attr('src', data.photo);
+            $('#imagemodal').modal('show');
+        };
+
+        $('#name').val("");
+        $('#photo').val("");
+        $('#q1').val("");
+        $('#q2').val("");
+        $('#q3').val("");
+        $('#q4').val("");
+        $('#q5').val("");
+        $('#q6').val("");
+        $('#q7').val("");
+        $('#q8').val("");
+        $('#q9').val("");
+        $('#q10').val("");
+    });
+});
+
+
+</script>
 
 </body>
 

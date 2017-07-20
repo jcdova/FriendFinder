@@ -16,7 +16,7 @@ var friendsArray = [
       ]
     },
     {
-      "name":"Selma",
+      "name":"Salma",
       "photo":"http://jonvilma.com/images/salma-hayek-1.jpg",
       "scores":[
           4,
