@@ -8,7 +8,7 @@ module.exports = function(app) {
 		res.json(friends);	
 	}); 
 
-	app.post("/api/new", function(req, res) {
+	app.post("/api/friends", function(req, res) {
         var newClient = req.body;
         var myScore = newClient.scores;
         var total = 0;
@@ -32,7 +32,7 @@ module.exports = function(app) {
 
         }
 
-        console.log('best Choice', friends[index]);
+        console.log('Best Choice', friends[index]);
         friends.push(newClient);
         res.json(friends[index]);
     });

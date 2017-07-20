@@ -30,6 +30,70 @@ var friendsArray = [
           4,
           2
       ]
+    },
+    {
+      "name":"Scarlet",
+      "photo":"http://www.speakerscorner.me/wp-content/uploads/2015/12/scarlett8.jpg",
+      "scores":[
+          5,
+          1,
+          3,
+          2,
+          1,
+          3,
+          3,
+          1,
+          4,
+          5
+      ]
+    },
+    {
+      "name":"Ricky",
+      "photo":"http://www.wetpaint.com/wp-content/uploads/2016/01/ricky-martin-body.jpg",
+      "scores":[
+          4,
+          1,
+          1,
+          4,
+          1,
+          1,
+          1,
+          2,
+          4,
+          4
+      ]
+    },
+    {
+      "name":"The Rock",
+      "photo":"https://3.bp.blogspot.com/-EDV5JRYVvXQ/UaJR_FuGFII/AAAAAAAAD8c/nrwkPgFOlZw/s1600/23322_001_2465_R.jpg",
+      "scores":[
+          1,
+          2,
+          3,
+          4,
+          5,
+          5,
+          4,
+          3,
+          2,
+          1
+      ]
+    },
+    {
+      "name":"George Lopez",
+      "photo":"http://media.culturemap.com/crop/52/e2/600x600/George-Lopez-hidden-houston-video_105935.jpg",
+      "scores":[
+          5,
+          2,
+          3,
+          4,
+          1,
+          5,
+          2,
+          3,
+          1,
+          5
+      ]
     }
   ];
 
